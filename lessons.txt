@@ -72,3 +72,14 @@ A promise can get rejected if an error is thrown inside any of the the .then() b
 
         404 and above status codes will return false
 
+- Current Time Formating in Javascript (toLocalTimeString())
+- create new date
+    const date = new Date()
+-apply the toLocaleTimeString with the necessary property:value pair.
+   const currentTime date.toLocaleTimeString('en-us', {timeStyle: 'short'})
+   console.log(currentTime)
+
+- setInterval is used to update time every second like some
+    setInterval(() => {
+        the time logic goes here
+    }, 1000)

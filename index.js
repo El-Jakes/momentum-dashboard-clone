@@ -1,14 +1,15 @@
 const cryptoData = document.getElementById("crypto-data");
-const imgAuthor = document.getElementById("img-author");
 const crypto = document.getElementById("crypto");
+const currentTime = document.getElementById('current-time')
+const imgAuthor = document.getElementById("img-author");
 
 fetch(
   "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature"
 )
   .then((response) => response.json())
   .then((data) => {
-    document.body.style.backgroundImage = `url(${data.urls.regular})`;
-    imgAuthor.textContent = `Author: ${data.user.name}`;
+      document.body.style.backgroundImage = `url(${data.urls.regular})`;
+      imgAuthor.textContent = `Author: ${data.user.name}`;
   })
   .catch((err) => {
     document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTQ4OTg2MTZ8&ixlib=rb-4.0.3&q=80&w=1080)`;
@@ -26,3 +27,10 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
     `;
   })
   .catch((err) => console.log("error found"));
+
+  const getCurrentTime = () => {
+      const date = new Date()
+      currentTime.textContent = date.toLocaleTimeString("en-us", { timeStyle: "short" });
+  }
+
+  setInterval(getCurrentTime, 1000)

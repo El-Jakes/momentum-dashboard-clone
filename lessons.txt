@@ -1,0 +1,9 @@
+CONCEPTS LEARNED
+
+- A random image image is fetched from the Unsplash API
+- The html body background was styled in order for the image to automatically fit the window. It pdroduce background image that works on any screen size no matter how it is resized.
+the code can be gotten from the link below:
+https://css-tricks.com/perfect-full-page-background-image/#awesome-easy-progressive-css3-way
+
+- The random image pulled was set as the background-image for the body.
+

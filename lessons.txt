@@ -6,4 +6,5 @@ the code can be gotten from the link below:
 https://css-tricks.com/perfect-full-page-background-image/#awesome-easy-progressive-css3-way
 
 - The random image pulled was set as the background-image for the body.
-
+- Image author was also grabbed and rendered on the screen
+- Flexbox was used to layout the app

@@ -1,5 +1,6 @@
 const cryptoData = document.getElementById("crypto-data");
 const imgAuthor = document.getElementById("img-author");
+const crypto = document.getElementById("crypto");
 
 fetch(
   "https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature"
@@ -17,5 +18,11 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
   .then((response) => response.json())
   .then((data) => {
     cryptoData.innerHTML = `<span>${data.name}</span> <img src='${data.image.small}' />`
+
+    crypto.innerHTML += `
+        <p>🌞: ${data.market_data.current_price.ngn} NGN</p>
+        <p>🚀: ${data.market_data.high_24h.ngn} NGN</p>
+        <p>🛬: ${data.market_data.low_24h.ngn} NGN</p>
+    `;
   })
   .catch((err) => console.log("error found"));

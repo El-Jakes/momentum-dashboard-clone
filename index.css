@@ -33,6 +33,10 @@ body {
   font-size: 1.3rem;
 }
 
+.main__top-crypto p {
+  margin: 5px;
+}
+
 .crypto-data-heading {
   display: flex;
   align-items: center;

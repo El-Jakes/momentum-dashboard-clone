@@ -8,3 +8,14 @@ https://css-tricks.com/perfect-full-page-background-image/#awesome-easy-progress
 - The random image pulled was set as the background-image for the body.
 - Image author was also grabbed and rendered on the screen
 - Flexbox was used to layout the app
+
+- PROMISE: a ppromise that an operation that normally takes abit of time will eventually finish running
+
+*States a Promis can Be in
+-Pending:
+-Resolved(fullfilled): the task we wanted to perform finished successfully 
+-Rejected: Opposite ofresolved
+
+note: the .then() method is used to tell the code to do something after a promise is Resolved
+
+*HANDLING REJECTED PROMISE

@@ -4,12 +4,10 @@
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-}
 
 body {
+    margin: 0;
+    padding: 1em;
     background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -17,5 +15,21 @@ body {
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     color: white;
-    text-shadow: 1px 1px 1px hsl(0, 2%, 8%);
+    text-shadow: 2px 2px 2px #474747;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__time {
+    align-self: center;
 }

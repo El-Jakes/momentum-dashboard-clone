@@ -42,3 +42,33 @@ A promise can get rejected if an error is thrown inside any of the the .then() b
 
 - 
 
+#COINGECKO API (https://www.coingecko.com/api/documentations/v3#/)
+ - This API helps in returning current data for a coin and has pother interesting stuffs you might want to checkout.
+
+ *Checking for error response
+ -the 'ok' property is used for this
+ 'response.ok' is used for checking status of a request and in turn checks for error
+    example: fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+    .then(res => {
+        if (!response.ok) {
+            throw Error("Something went wrong")
+        }
+        console.log(res.status)
+        return res.json()
+    })
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => console.error(err))
+
+ Side note: https://httpstat.us/200 is a url that allows us to get certain status back just by default.
+    fetch('https://httpstat.us/200')
+        .then(res => {
+            console.log(res.ok) // true
+            console.log(res.status) // true
+        })
+        .then(data => console.log(data))
+        .catch(err => console.error(err))
+
+        404 and above status codes will return false
+

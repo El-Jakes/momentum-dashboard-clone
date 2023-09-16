@@ -1,6 +1,8 @@
 CONCEPTS LEARNED
 
-- A random image image is fetched from the Unsplash API
+- A random image image is fetched from the Unsplash API using a query string pointing to nature images.
+    API link: https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature
+
 - The html body background was styled in order for the image to automatically fit the window. It pdroduce background image that works on any screen size no matter how it is resized.
 the code can be gotten from the link below:
 https://css-tricks.com/perfect-full-page-background-image/#awesome-easy-progressive-css3-way
@@ -19,3 +21,24 @@ https://css-tricks.com/perfect-full-page-background-image/#awesome-easy-progress
 note: the .then() method is used to tell the code to do something after a promise is Resolved
 
 *HANDLING REJECTED PROMISE
+A promise can get rejected if an error is thrown inside any of the the .then() blocks or if a programmer manually calls the Promise.reject() method
+-the .catch() method is used for handling rejected promises by chaining it to the .then() block
+
+    fetch("https://apis.com/error")
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => {
+        console.log('something went wrong')
+        this is where you tell the catch block what to do or how to handle the error as seen below:
+
+        document.body.style.backgroundImage = `url(https://cdn.xxl.thumbs.canstockphoto.com/danger-sign-drawing_csp0665020.jpg)`;
+
+    })
+
+    the .catch() helps with user experience.
+- developers sometimes write code that report the error to some kind of services in order to revisit it and debug the error
+
+- 
+

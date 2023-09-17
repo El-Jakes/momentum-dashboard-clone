@@ -40,33 +40,33 @@ body {
 .crypto-data-heading {
   display: flex;
   align-items: center;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .main__time {
-    font-size: 5rem;
+  font-size: 5rem;
   align-self: center;
 }
 
 .main__weather {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
-    align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: flex-start;
 }
 
 .main__weather img {
-    /* width: 100px; */
+  /* width: 100px; */
 }
 
 .main__weather .temp {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .weather-city {
-    width: 100%;
-    margin-top: -15px;
-    font-size: 1rem;
-    text-align: right;
+  width: 100%;
+  margin-top: -15px;
+  font-size: 1rem;
+  text-align: right;
 }

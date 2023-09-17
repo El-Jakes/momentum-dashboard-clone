@@ -4,7 +4,7 @@
   "description": "Cloned version of Momentum Dashboard",
   "version": "1.0",
   "action": {
-    "default_icon": "temperature.png"
+    "default_icon": "temperature.png" //"Icon made by Freepik from www.flaticon.com"
   },
   "chrome_url_overrides": {
     "new_tab": "index.html"

@@ -51,8 +51,8 @@ fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
         const weatherIcon = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         mainWeather.innerHTML = `
             <img src='${weatherIcon}' />
-            <h1>${Math.round(data.main.temp)}°</h1>
-            <h2>${data.name}</h2>
+            <p class="temp">${Math.round(data.main.temp)}°</p>
+            <p class="weather-city">${data.name}</p>
         `
 
     })

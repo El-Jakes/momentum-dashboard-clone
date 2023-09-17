@@ -46,3 +46,26 @@ body {
 .main__time {
   align-self: center;
 }
+
+.main__weather {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    align-self: flex-start;
+}
+
+.main__weather img {
+    /* width: 100px; */
+}
+
+.main__weather .temp {
+    font-size: 1.5rem;
+}
+
+.weather-city {
+    width: 100%;
+    margin-top: -15px;
+    font-size: 1rem;
+    text-align: right;
+}

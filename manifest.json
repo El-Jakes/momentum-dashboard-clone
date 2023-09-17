@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Momentum Dashboard Clone",
+  "description": "Cloned version of Momentum Dashboard",
+  "version": "1.0",
+  "action": {
+    "default_icon": "temperature.png"
+  },
+  "chrome_url_overrides": {
+    "new_tab": "index.html"
+  }
+}

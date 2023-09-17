@@ -94,4 +94,4 @@ A promise can get rejected if an error is thrown inside any of the the .then() b
 note: the weather data fetch is done inside the Geolocation block and the position object is used to acess the longitude and latitude.
 also remember to pass in the error check condition.
 
-
+NOTE: To add the degree symbol to a number in windows: alt + 0176

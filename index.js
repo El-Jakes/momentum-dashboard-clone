@@ -1,7 +1,6 @@
 const cryptoData = document.getElementById("crypto-data");
 const crypto = document.getElementById("crypto");
 const mainWeather = document.getElementById("main-weather");
-const weather = document.getElementById("weather");
 const currentTime = document.getElementById('current-time')
 const imgAuthor = document.getElementById("img-author");
 
@@ -17,7 +16,7 @@ fetch(
     document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1500382017468-9049fed747ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTQ4OTg2MTZ8&ixlib=rb-4.0.3&q=80&w=1080)`;
   });
 
-fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+fetch("https://api.coingecko.com/api/v3/coins/bitcoin")
   .then((response) => response.json())
   .then((data) => {
     cryptoData.innerHTML = `<span>${data.name}</span> <img src='${data.image.small}' />`
@@ -47,6 +46,15 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
         }
         return res.json()
     })
-      .then(data => console.log(data))
+    .then(data => {
+        console.log(data)
+        const weatherIcon = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        mainWeather.innerHTML = `
+            <img src='${weatherIcon}' />
+            <h1>${Math.round(data.main.temp)}°</h1>
+            <h2>${data.name}</h2>
+        `
+
+    })
   })
   .catch(err => console.error(err))

@@ -1,5 +1,7 @@
 const cryptoData = document.getElementById("crypto-data");
 const crypto = document.getElementById("crypto");
+const mainWeather = document.getElementById("main-weather");
+const weather = document.getElementById("weather");
 const currentTime = document.getElementById('current-time')
 const imgAuthor = document.getElementById("img-author");
 
@@ -34,3 +36,17 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
   }
 
   setInterval(getCurrentTime, 1000)
+
+  navigator.geolocation.getCurrentPosition((position) => {
+    fetch(
+      `https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`
+    )
+      .then(res => {
+        if (!res.ok) {
+            throw Errow('Weather data not found')
+        }
+        return res.json()
+    })
+      .then(data => console.log(data))
+  })
+  .catch(err => console.error(err))

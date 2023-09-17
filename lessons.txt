@@ -83,3 +83,15 @@ A promise can get rejected if an error is thrown inside any of the the .then() b
     setInterval(() => {
         the time logic goes here
     }, 1000)
+
+#Getting Weather data from open weather map API
+-To get weather data for a location the lattide and longitude are a necessary factor to consider and we can get the by acessing the Geolocation web API to get current position as seen below
+
+        navigator.geolocation.getCurrentPosition(position => {
+        console.log(position)
+    });
+- Weather data is then gotten from open weather API
+note: the weather data fetch is done inside the Geolocation block and the position object is used to acess the longitude and latitude.
+also remember to pass in the error check condition.
+
+

@@ -17,7 +17,7 @@ body {
 }
 
 .main {
-  padding: 1em;
+  padding: 1em 2em;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -54,10 +54,6 @@ body {
   align-items: center;
   justify-content: flex-end;
   align-self: flex-start;
-}
-
-.main__weather img {
-  /* width: 100px; */
 }
 
 .main__weather .temp {
